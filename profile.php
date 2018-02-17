@@ -5,8 +5,13 @@
 	require_once("class.user.php");
 	$auth_user = new USER();
 
+    if(isset($_SESSION['user_session'])){
+        $user_id = $_SESSION['user_session'];
+    }else{
+        echo "You have no power here, Gandalf!";
+    }
 
-	$user_id = $_SESSION['user_session'];
+	echo $user_id;
 
 	$stmt = $auth_user->runQuery("SELECT * FROM tb_karyawan  WHERE no_ktp=:user_id");
 	$stmt->execute(array(":user_id"=>$user_id));
@@ -23,6 +28,8 @@
     $g = '<div class="alert alert-danger"> <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
   <strong>Danger!</strong> anda belum memilih salah satu jenis pekerjaan. <a href="?p=pilihPekerjaan">pilih</a> minimal satu pekerjaan.
 </div>';
+  }else{
+      $g="";
   }
   $base_url="http://".$_SERVER['SERVER_NAME'].dirname($_SERVER["REQUEST_URI"].'?').'';
 ?>
@@ -35,6 +42,8 @@
     <link rel="stylesheet" href="assets/style.css" type="text/css"  />
     <!-- Bootstrap Tables -->
     <link rel="stylesheet" href="bootstrap-table/dist/bootstrap-table.min.css">
+    <!-- Bootstrap Datepicker -->
+    <link rel="stylesheet" type="text/css" href="bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
     <title>Welcome - <?php print($userRow['email']); ?></title>
@@ -63,6 +72,13 @@
     display:inline-block;
     color: #FFFFFF;
   }
+      .contain {
+          display: block;
+          background-color: #fff;
+          padding: 12px;
+          border-radius: 8px;
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #67b168;
+      }
     </style>
 </head>
 
@@ -82,7 +98,7 @@
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-         <ul class="nav navbar-nav">
+         <ul class="nav navbar-nav" style="text-transform: capitalize;">
             <li ><a href="<?=$base_url?>">home</a></li>
             <li><a href="?p=profile">profile</a></li>
             <li class="dropdown">
@@ -91,8 +107,9 @@
                   <li><a href="?p=update">informasi</a></li>
                   <?php if ($userRow['status'] == 1) {?>
                   <li><a href="?p=list">list job</a></li>
-                  <li><a href="#">form leave</a></li>
-                  <li><a href="#">form complain</a></li>
+                      <li><a href="?p=lembur">form lembur</a></li>
+                      <li><a href="?p=leave">form leave</a></li>
+                  <li><a href="?p=kom">form complain</a></li>
                   <?php }  ?>
                </ul>
             </li>
@@ -120,9 +137,11 @@
             echo'<div class="">'.$g.'</div>';
             require 'page.php';
           ?>
-          
+
 
   <script type="text/javascript" src="vendor/jquery/jquery.min.js"></script>
+      <script type="text/javascript" src="vendor/jquery/parsley.js"></script>
+      <script type="text/javascript" src="vendor/jquery/custom.js"></script>
   <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
   <!-- Bootstrap Datepciker -->
   <script src="bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
@@ -135,7 +154,7 @@
   <script type="text/javascript" src="dist/js/framework/bootstrap.js"></script>
 
 
-  <script type="text/javascript">
+      <script type="text/javascript">
 
         function readURL(input) {
 

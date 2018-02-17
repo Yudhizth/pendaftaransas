@@ -14,8 +14,7 @@ $ktp=$_GET['no_ktp'];
  
  while($row=$stmt->fetch(PDO::FETCH_ASSOC)){
 
- 	$row["action"]='&nbsp;&nbsp;&nbsp;&nbsp;
-  					<a onclick="deletedatareferensi(id='.$row['id'].')" <i class="fa fa-trash" aria-hidden="true" data-placement="top" title="Hapus !"></i>
+ 	$row["action"]='&nbsp;&nbsp;&nbsp;&nbsp;<a onclick="deletedatareferensi(id='.$row['id'].')" <i class="fa fa-trash" aria-hidden="true" data-placement="top" title="Hapus !"></i>
 				  </a>';
   
   array_push($datareferensi,$row);

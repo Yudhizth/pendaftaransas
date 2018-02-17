@@ -104,6 +104,21 @@ class USER
 		unset($_SESSION['user_session']);
 		return true;
 	}
+    public function getKode($id, $kode, $tbName)
+    {
+
+        $sql = "SELECT MAX(RIGHT(". $id . ", 4)) AS max_id FROM " . $tbName . " ORDER BY ". $id . "";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+
+        $row = $stmt->fetch(PDO::FETCH_LAZY);
+        $id = $row['max_id'];
+        $sort_num = (int) substr($id, 1, 6);
+        $sort_num++;
+        $new_code = sprintf("$kode%04s", $sort_num);
+
+        return $new_code;
+    }
 	
 	public function Generate($id, $kode, $tbName)
 	{
@@ -119,6 +134,14 @@ class USER
 
   		return $new_code;
 	}
+    public function getDate($format)
+    {
+        date_default_timezone_set("Asia/Jakarta");
+
+        $tanggal = date($format);
+
+        return $tanggal;
+    }
 }
 
 class PENDAFTARAN

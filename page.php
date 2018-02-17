@@ -13,6 +13,18 @@
                     case"list":
                         include"listJob.php";
                         break;
+                    case"detail":
+                        include"detail.php";
+                        break;
+                    case"lembur":
+                        include"lembur.php";
+                        break;
+                    case"leave":
+                        include"leave.php";
+                        break;
+                    case"kom":
+                        include"komplain.php";
+                        break;
                     case"pesan":
                         include"pesan.php";
                         break;
