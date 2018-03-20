@@ -9,6 +9,15 @@
 $sql = "SELECT * FROM tb_lembur WHERE no_ktp = :ktp ORDER BY tanggal DESC ";
 $stmt = $auth_user->runQuery($sql);
 $stmt->execute(array(':ktp' => $user_id));
+
+$sql2 = "SELECT tb_list_karyawan.kode_list_karyawan, tb_list_karyawan.no_nip, tb_kerjasama_perusahan.nomor_kontrak, tb_kerjasama_perusahan.kode_perusahaan, tb_perusahaan.nama_perusahaan FROM tb_list_karyawan
+INNER JOIN tb_kerjasama_perusahan ON tb_kerjasama_perusahan.kode_list_karyawan=tb_list_karyawan.kode_list_karyawan
+INNER JOIN tb_perusahaan ON tb_perusahaan.kode_perusahaan=tb_kerjasama_perusahan.kode_perusahaan
+WHERE tb_list_karyawan.no_nip = :nomorKTP";
+$stmt2 = $auth_user->runQuery($sql2);
+$stmt2->execute(array(
+        ':nomorKTP' => $user_id
+));
 ?>
 
 
@@ -32,7 +41,9 @@ $stmt->execute(array(':ktp' => $user_id));
         <tr>
             <th width="2%">#</th>
             <th width="28%">Tanggal</th>
-            <th width="55%">Keterangan</th>
+            <th width="10%">Project</th>
+            <th width="10%">Berapa Jam</th>
+            <th width="35%">Keterangan</th>
             <th width="15%">Status</th>
         </tr>
         </thead>
@@ -53,6 +64,8 @@ $stmt->execute(array(':ktp' => $user_id));
                 <tr>
                     <th scope="row"><?=$i++;?></th>
                     <td><?=$row['tanggal']?></td>
+                    <td><?=$row['kode_lembur']?></td>
+                    <td><?=$row['jam']?> jam</td>
                     <td><?=$row['keterangan']?></td>
                     <td>
                         <?=$status?>
@@ -62,7 +75,7 @@ $stmt->execute(array(':ktp' => $user_id));
             <?php  }
         }else{ ?>
         <Tr>
-            <td colspan="4">
+            <td colspan="6">
                 Belum ada riwayat lembur.
             </td>
         </Tr>
@@ -85,6 +98,32 @@ $stmt->execute(array(':ktp' => $user_id));
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="textNama" value="<?=$userRow['nama_depan']?> <?=$userRow['nama_belakang']?>" readonly>
                     <input type="hidden" class="form-control" id="textKTP" value="<?=$user_id?>" readonly>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Project</label>
+                <div class="col-sm-6">
+                    <select class="form-control" name="txtProject" id="txtProject" required>
+                        <option value="">-- select project --</option>
+                        <?php while ($col = $stmt2->fetch(PDO::FETCH_LAZY)){ ?>
+                            <option value="<?=$col['nomor_kontrak']?>"><?=$col['nama_perusahaan']?> - <?=$col['nomor_kontrak']?></option>
+                        <?php } ?>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label" for="inputDate">Waktu Lembur</label>
+                <div style="padding-left: 1.6666666%;" class="input-group date form_time col-md-5" data-date="" data-date-format="dd MM yyyy - hh:ii" data-link-field="dtp_input3" data-link-format="hh:ii">
+                    <input class="form-control" size="16" type="text" value="" readonly>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                </div>
+                <input type="hidden" id="dtp_input3" name="txtTime" value="" /><br/>
+            </div>
+            <div class="form-group">
+                <label for="inputJam" class="col-sm-2 control-label">Berapa Jam</label>
+                <div class="col-sm-4">
+                    <input type="number" name="txtJam" id="totalJam" class="form-control" required>
                 </div>
             </div>
             <div class="form-group">

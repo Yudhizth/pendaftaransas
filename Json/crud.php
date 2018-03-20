@@ -11,23 +11,26 @@ $config = new USER();
 
 if(@$_GET['type'] == 'addLembur'){
 
-    $table = "tb_lembur";
-    $field = "kode_lembur";
-    $key = "LMBR";
 
-    $kode = $config->getKode($field, $key, $table);
+    $kode = $config->getDate("Y/m/d");
 
     $ktp = $_POST['ktp'];
     $ket = $_POST['keterangan'];
+    $total = $_POST['total'];
+    $times = $_POST['times'];
+    $nomorKontrak = $_POST['nomor_kontrak'];
     $status = "";
+    $tanggal = $kode . ' ' . $times . ':00';
 
-    $sql = "INSERT INTO tb_lembur (kode_lembur, no_ktp, keterangan, status) VALUES (:kode, :ktp, :ket, :st)";
+    $sql = "INSERT INTO tb_lembur (kode_lembur, no_ktp, keterangan, tanggal, status, jam) VALUES (:a, :b, :c, :d, :e, :f)";
     $stmt = $config->runQuery($sql);
     $stmt->execute(array(
-        ':kode' => $kode,
-        ':ktp'  => $ktp,
-        ':ket'  => $ket,
-        ':st'   => $status
+        ':a' => $nomorKontrak,
+        ':b'  => $ktp,
+        ':c'  => $ket,
+        ':d'   => $tanggal,
+        ':e'    =>$status,
+        ':f'    =>$total
     ));
 
     if($stmt){

@@ -38,7 +38,7 @@
 </div>
 
 <div class="panel panel-primary panel-body" id="listkomplain">
-    <h3>List Cuti</h3>
+    <h3>List Complain Karyawan</h3>
     <hr>
     <button class="btn btn-sm btn-success" id="getKomplain">
         <span class="glyphicon glyphicon-plus-sign"></span> form komplain

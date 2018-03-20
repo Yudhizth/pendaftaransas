@@ -24,7 +24,7 @@
          # code...
          echo "<script>
      alert('Update Success!');
-     window.location.href='/pendaftaran/';
+     window.location.href='/profile.php';
      </script>";
        } else{
          echo "Gagal";
@@ -57,7 +57,7 @@
          # code...
          echo "<script>
      alert('Update Success!');
-     window.location.href='/pendaftaran/';
+     window.location.href='/profile.php';
      </script>";
        } else{
          echo "Gagal";

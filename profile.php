@@ -134,7 +134,7 @@
   
 
         <?php
-            echo'<div class="">'.$g.'</div>';
+            
             require 'page.php';
           ?>
 
@@ -155,6 +155,17 @@
 
 
       <script type="text/javascript">
+          $('.form_time').datetimepicker({
+              // language:  'fr',
+              weekStart: 1,
+              todayBtn:  1,
+              autoclose: 1,
+              todayHighlight: 1,
+              startView: 1,
+              minView: 0,
+              maxView: 1,
+              forceParse: 0
+          });
 
         function readURL(input) {
 

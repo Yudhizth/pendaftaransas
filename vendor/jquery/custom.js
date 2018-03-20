@@ -42,11 +42,14 @@ $(document).ready(function(){
     $('#reqLembur').on('submit', function () {
         var id = $('#textKTP').val();
         var keterangan = $('#txtKeterangan').val();
+        var totalJam = $('#totalJam').val();
+        var times = $('#dtp_input3').val();
+        var nomor_spk = $('#txtProject').val();
         if(keterangan != ""){
             $.ajax({
                 url : 'Json/crud.php?type=addLembur',
                 type: 'post',
-                data: 'ktp='+id+'&keterangan='+keterangan,
+                data: 'ktp='+id+'&keterangan='+keterangan+'&total='+totalJam+'&times='+times+'&nomor_kontrak='+nomor_spk,
 
                 success: function (msg) {
                     if(msg != ""){

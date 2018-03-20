@@ -2,27 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd8a1ca4-1ccf-435b-9b9b-3d911979faec" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Json/crud.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Json/data-crud.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/detail.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/detailJobs.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/komplain.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/leave.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lembur.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/vendor/jquery/custom.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/vendor/jquery/parsley.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Json/data-referensi.php" afterPath="$PROJECT_DIR$/Json/data-referensi.php" />
+      <change beforePath="$PROJECT_DIR$/Json/crud.php" afterPath="$PROJECT_DIR$/Json/crud.php" />
       <change beforePath="$PROJECT_DIR$/assets/images/mock-up-form-pendaftaran-01.png" afterPath="" />
       <change beforePath="$PROJECT_DIR$/assets/images/mock-up-form-pendaftaran-02.png" afterPath="" />
       <change beforePath="$PROJECT_DIR$/assets/images/mock-up-form-pendaftaran-03.png" afterPath="" />
       <change beforePath="$PROJECT_DIR$/assets/images/mock-up-form-pendaftaran-04.png" afterPath="" />
       <change beforePath="$PROJECT_DIR$/assets/images/mock-up-form-pendaftaran-05.png" afterPath="" />
       <change beforePath="$PROJECT_DIR$/assets/images/mock-up-form-pendaftaran-06.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/class.user.php" afterPath="$PROJECT_DIR$/class.user.php" />
-      <change beforePath="$PROJECT_DIR$/listJob.php" afterPath="$PROJECT_DIR$/listJob.php" />
-      <change beforePath="$PROJECT_DIR$/page.php" afterPath="$PROJECT_DIR$/page.php" />
+      <change beforePath="$PROJECT_DIR$/default.php" afterPath="$PROJECT_DIR$/default.php" />
+      <change beforePath="$PROJECT_DIR$/komplain.php" afterPath="$PROJECT_DIR$/komplain.php" />
+      <change beforePath="$PROJECT_DIR$/lembur.php" afterPath="$PROJECT_DIR$/lembur.php" />
+      <change beforePath="$PROJECT_DIR$/notification.php" afterPath="$PROJECT_DIR$/notification.php" />
       <change beforePath="$PROJECT_DIR$/profile.php" afterPath="$PROJECT_DIR$/profile.php" />
+      <change beforePath="$PROJECT_DIR$/vendor/jquery/custom.js" afterPath="$PROJECT_DIR$/vendor/jquery/custom.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,7 +25,88 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="komplain.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/komplain.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="40" column="30" lean-forward="false" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lembur.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lembur.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="686">
+              <caret line="67" column="44" lean-forward="false" selection-start-line="67" selection-start-column="44" selection-end-line="67" selection-end-column="44" />
+              <folding>
+                <marker date="1521308582315" expanded="true" signature="105:170" ph="SELECT * FRO... tb_lembur" />
+                <marker date="1521308582315" expanded="true" signature="263:715" ph="SELECT tb_li... tb_list_karyawan" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="custom.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/jquery/custom.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="833">
+              <caret line="49" column="53" lean-forward="false" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="crud.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Json/crud.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="35" lean-forward="false" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+              <folding>
+                <marker date="1521453611905" expanded="true" signature="466:575" ph="INSERT INTO tb_lembur... " />
+                <marker date="1521453611905" expanded="true" signature="1040:1118" ph="INSERT INTO tb_cuti... " />
+                <marker date="1521453611905" expanded="true" signature="1717:1833" ph="INSERT INTO tb_complain_karyawan... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class.user.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/class.user.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2431">
+              <caret line="143" column="5" lean-forward="false" selection-start-line="143" selection-start-column="5" selection-end-line="143" selection-end-column="5" />
+              <folding>
+                <marker date="1517924383226" expanded="true" signature="848:931" ph="INSERT INTO tb_login_karyawan... " />
+                <marker date="1517924383226" expanded="true" signature="1302:1391" ph="SELECT no_kt... tb_login_karyawan" />
+                <marker date="1517924383226" expanded="true" signature="2635:2734" ph="SELECT MAX(R... tb_temporary_perusahaan" />
+                <marker date="1517924383226" expanded="true" signature="3685:3743" ph="SELECT count... tb_karyawan" />
+                <marker date="1517924383226" expanded="true" signature="3910:4437" ph="UPDATE tb_karyawan... " />
+                <marker date="1517924383226" expanded="true" signature="5473:6052" ph="INSERT INTO tb_karyawan... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/profile.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2771">
+              <caret line="163" column="25" lean-forward="false" selection-start-line="163" selection-start-column="25" selection-end-line="163" selection-end-column="25" />
+              <folding>
+                <marker date="1521306905202" expanded="true" signature="301:349" ph="SELECT * FRO... tb_karyawan" />
+                <marker date="1521306905202" expanded="true" signature="484:740" ph="SELECT tb_pu... tb_push" />
+                <marker date="1521306905202" expanded="true" signature="838:889" ph="SELECT * FRO... tb_apply_pekerjaan" />
+                <marker date="1521306905202" expanded="true" signature="1060:1281" ph="..." />
+                <marker date="1521306905202" expanded="false" signature="1128:1135" ph="×" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -50,6 +124,8 @@
       <find>datepciker</find>
       <find>datepic</find>
       <find>datepicker</find>
+      <find>reqLembur</find>
+      <find>addLembur</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -70,17 +146,17 @@
         <option value="$PROJECT_DIR$/listJob.php" />
         <option value="$PROJECT_DIR$/detail.php" />
         <option value="$PROJECT_DIR$/vendor/jquery/parsley.js" />
-        <option value="$PROJECT_DIR$/lembur.php" />
         <option value="$PROJECT_DIR$/Json/data-referensi.php" />
         <option value="$PROJECT_DIR$/leave.php" />
         <option value="$PROJECT_DIR$/vendor/komplain.php" />
-        <option value="$PROJECT_DIR$/profile.php" />
         <option value="$PROJECT_DIR$/page.php" />
-        <option value="$PROJECT_DIR$/vendor/jquery/custom.js" />
         <option value="$PROJECT_DIR$/class.user.php" />
-        <option value="$PROJECT_DIR$/Json/crud.php" />
         <option value="$PROJECT_DIR$/Json/data-crud.php" />
         <option value="$PROJECT_DIR$/komplain.php" />
+        <option value="$PROJECT_DIR$/profile.php" />
+        <option value="$PROJECT_DIR$/vendor/jquery/custom.js" />
+        <option value="$PROJECT_DIR$/Json/crud.php" />
+        <option value="$PROJECT_DIR$/lembur.php" />
       </list>
     </option>
   </component>
@@ -112,7 +188,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -123,24 +199,24 @@
             <path>
               <item name="pendaftaran" type="b2602c69:ProjectViewProjectNode" />
               <item name="pendaftaran" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bootstrap-datetimepicker" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="pendaftaran" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pendaftaran" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bootstrap-datetimepicker" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="sample in bootstrap v2" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="pendaftaran" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pendaftaran" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Json" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="pendaftaran" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pendaftaran" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="pendaftaran" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pendaftaran" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="jquery" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -254,7 +330,10 @@
       <workItem from="1517912587167" duration="10218000" />
       <workItem from="1518165474246" duration="20000" />
       <workItem from="1518165513524" duration="591000" />
-      <workItem from="1518892396035" duration="7000" />
+      <workItem from="1518892396035" duration="398000" />
+      <workItem from="1519030187395" duration="149000" />
+      <workItem from="1521305348441" duration="3330000" />
+      <workItem from="1521564740893" duration="6000" />
     </task>
     <task id="LOCAL-00001" summary="Update Profile">
       <created>1501907062491</created>
@@ -263,26 +342,33 @@
       <option name="project" value="LOCAL" />
       <updated>1501907062491</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="banyak perubahaan">
+      <created>1518892557793</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1518892557793</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33526000" />
+    <option name="totallyTimeSpent" value="37402000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.213125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.213125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286385" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286385" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -301,7 +387,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update Profile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Profile" />
+    <MESSAGE value="banyak perubahaan" />
+    <option name="LAST_COMMIT_MESSAGE" value="banyak perubahaan" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -602,13 +689,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lembur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="97" column="72" lean-forward="false" selection-start-line="97" selection-start-column="72" selection-end-line="97" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/page.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="295">
@@ -623,34 +703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/jquery/custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1666">
-          <caret line="98" column="49" lean-forward="false" selection-start-line="98" selection-start-column="38" selection-end-line="98" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1887">
-          <caret line="111" column="37" lean-forward="false" selection-start-line="111" selection-start-column="37" selection-end-line="111" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/class.user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2431">
-          <caret line="143" column="5" lean-forward="false" selection-start-line="143" selection-start-column="5" selection-end-line="143" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Json/crud.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1462">
-          <caret line="86" column="22" lean-forward="false" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Json/data-crud.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="986">
@@ -660,8 +712,69 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/komplain.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="57" column="33" lean-forward="false" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
+        <state relative-caret-position="595">
+          <caret line="40" column="30" lean-forward="false" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2771">
+          <caret line="163" column="25" lean-forward="false" selection-start-line="163" selection-start-column="25" selection-end-line="163" selection-end-column="25" />
+          <folding>
+            <marker date="1521306905202" expanded="true" signature="301:349" ph="SELECT * FRO... tb_karyawan" />
+            <marker date="1521306905202" expanded="true" signature="484:740" ph="SELECT tb_pu... tb_push" />
+            <marker date="1521306905202" expanded="true" signature="838:889" ph="SELECT * FRO... tb_apply_pekerjaan" />
+            <marker date="1521306905202" expanded="true" signature="1060:1281" ph="..." />
+            <marker date="1521306905202" expanded="false" signature="1128:1135" ph="×" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class.user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2431">
+          <caret line="143" column="5" lean-forward="false" selection-start-line="143" selection-start-column="5" selection-end-line="143" selection-end-column="5" />
+          <folding>
+            <marker date="1517924383226" expanded="true" signature="848:931" ph="INSERT INTO tb_login_karyawan... " />
+            <marker date="1517924383226" expanded="true" signature="1302:1391" ph="SELECT no_kt... tb_login_karyawan" />
+            <marker date="1517924383226" expanded="true" signature="2635:2734" ph="SELECT MAX(R... tb_temporary_perusahaan" />
+            <marker date="1517924383226" expanded="true" signature="3685:3743" ph="SELECT count... tb_karyawan" />
+            <marker date="1517924383226" expanded="true" signature="3910:4437" ph="UPDATE tb_karyawan... " />
+            <marker date="1517924383226" expanded="true" signature="5473:6052" ph="INSERT INTO tb_karyawan... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/jquery/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" column="53" lean-forward="false" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Json/crud.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="35" lean-forward="false" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+          <folding>
+            <marker date="1521453611905" expanded="true" signature="466:575" ph="INSERT INTO tb_lembur... " />
+            <marker date="1521453611905" expanded="true" signature="1040:1118" ph="INSERT INTO tb_cuti... " />
+            <marker date="1521453611905" expanded="true" signature="1717:1833" ph="INSERT INTO tb_complain_karyawan... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lembur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="686">
+          <caret line="67" column="44" lean-forward="false" selection-start-line="67" selection-start-column="44" selection-end-line="67" selection-end-column="44" />
+          <folding>
+            <marker date="1521308582315" expanded="true" signature="105:170" ph="SELECT * FRO... tb_lembur" />
+            <marker date="1521308582315" expanded="true" signature="263:715" ph="SELECT tb_li... tb_list_karyawan" />
+          </folding>
         </state>
       </provider>
     </entry>
