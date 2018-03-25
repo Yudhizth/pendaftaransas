@@ -17,9 +17,10 @@
 	$stmt->execute(array(":user_id"=>$user_id));
     $userRow=$stmt->fetch(PDO::FETCH_LAZY);
     
-    $manage = $auth_user->runQuery("SELECT tb_push.kd_push, tb_push.dari, tb_push.kepada, tb_detail_push.kd_detail, tb_detail_push.read_date FROM tb_push INNER JOIN tb_detail_push ON tb_detail_push.kd_push = tb_push.kd_push WHERE tb_push.kepada = :user_id AND tb_detail_push.read_date IS NULL");
+    $manage = $auth_user->runQuery("SELECT id FROM tb_compos WHERE no_ktp = :user_id AND status ='' ");
     $manage->execute(array(":user_id"=>$user_id));
     $count = $manage->rowCount();
+
   $pj = "SELECT * FROM tb_apply_pekerjaan WHERE no_ktp = :id";
   $mg = $auth_user->runQuery($pj);
   $mg->execute(array(':id' => $user_id));
@@ -152,9 +153,12 @@
   <!-- Bootstrap Validation -->
   <script type="text/javascript" src="dist/js/formValidation.js"></script>
   <script type="text/javascript" src="dist/js/framework/bootstrap.js"></script>
+  <script src="vendor/ckeditor/ckeditor.js"></script>
+    <script src="vendor/ckeditor/styles.js"></script>
 
 
       <script type="text/javascript">
+          CKEDITOR.replace( 'pesanPush' );
           $('.form_time').datetimepicker({
               // language:  'fr',
               weekStart: 1,

@@ -1,25 +1,35 @@
 <?php
 $data = $_GET['kode'];
 $date = date('Y-m-d H:m:s');
-    $query = "SELECT tb_push.kd_push, tb_push.subject, tb_push.dari, tb_push.kepada, tb_detail_push.kd_detail, tb_detail_push.inisial, tb_detail_push.pesan, tb_detail_push.create_date, tb_detail_push.read_date, tb_subject_push.nama_subject FROM tb_push 
-    INNER JOIN tb_detail_push ON tb_detail_push.kd_push = tb_push.kd_push 
-    INNER JOIN tb_subject_push ON tb_subject_push.kd_subject = tb_push.subject
-    WHERE tb_push.kepada = :id AND tb_push.kd_push = :data";
+    $query = "SELECT tb_compos.id, tb_compos.kode_compos, tb_compos.id_reff, tb_compos.no_ktp, tb_compos.judul,
+            tb_compos.isi, tb_compos.create_date, tb_compos.admin, tb_compos.status, tb_karyawan.nama_depan, tb_karyawan.nama_belakang
+            FROM tb_compos 
+            INNER JOIN tb_karyawan ON tb_karyawan.no_ktp = tb_compos.no_ktp
+            WHERE tb_compos.kode_compos = :kode ";
     $dt = $auth_user->runQuery($query);
     $dt->execute(array(
-        ':id' => $user_id,
-        ':data' => $data
+        ':kode' => $data
     ));
 
-    // $kodeID = $dt->fetch(PDO::FETCH_LAZY);!
+    $row = $dt->fetch(PDO::FETCH_LAZY);
+
+    //show list
+    $dd = "SELECT tb_compos.id, tb_compos.kode_compos, tb_compos.id_reff, tb_compos.no_ktp, tb_compos.judul,
+            tb_compos.isi, tb_compos.create_date, tb_compos.admin, tb_compos.status, tb_karyawan.nama_depan, tb_karyawan.nama_belakang
+            FROM tb_compos 
+            LEFT JOIN tb_karyawan ON tb_karyawan.no_ktp = tb_compos.no_ktp
+            WHERE tb_compos.id_reff = :id ";
+    $listData = $auth_user->runQuery($dd);
+    $listData->execute(array(
+        ':id' => $row['kode_compos']
+    ));
 
     
-    $sql = "UPDATE tb_detail_push SET read_date = :tanggal WHERE kd_push = :kode AND inisial != :inisial ";
+    $sql = "UPDATE tb_compos SET status = :status WHERE kode_compos = :kode";
     $stmt = $auth_user->runQuery($sql);
     $stmt->execute(array(
-        ':tanggal'  => $date,
-        ':kode' => $data,
-        ':inisial' => $user_id
+        ':status'  => '1',
+        ':kode' => $data
     ));
 ?>
 <div class="row">
@@ -30,34 +40,40 @@ $date = date('Y-m-d H:m:s');
             </div>
             <div class="panel-body">
             <?php 
-                while($row = $dt->fetch(PDO::FETCH_LAZY)){
                     if($row['inisial'] == $user_id){
                         $kode = 'class="blockquote-reverse"';
                     }else{
                         $kode = '';
                     }
             ?>
-            <blockquote <?=$kode?>>
-                <p><?=$row['pesan'];?></p>
-                <small><?=$row['inisial'];?></small>
-                <i><small><?=$row['create_date'];?></small></i>
+            <blockquote <?=$kode?> style="">
+                <p><?=$row['isi'];?></p>
+                <small><?=$row['admin'];?></small>
+                <i style="margin-bottom: 2px; border-bottom: 1px solid #ebebeb;"><small><?=$row['create_date'];?></small></i>
             </blockquote>
-                <?php }
 
-$sq = "SELECT tb_push.kd_push, tb_push.subject, tb_push.dari, tb_push.kepada, tb_detail_push.kd_detail, tb_detail_push.inisial, tb_detail_push.pesan, tb_detail_push.create_date, tb_detail_push.read_date, tb_subject_push.nama_subject FROM tb_push 
-INNER JOIN tb_detail_push ON tb_detail_push.kd_push = tb_push.kd_push 
-INNER JOIN tb_subject_push ON tb_subject_push.kd_subject = tb_push.subject
-WHERE tb_push.kepada = :id AND tb_push.kd_push = :data";
-$mg = $auth_user->runQuery($sq);
-$mg->execute(array(
-    ':id' => $user_id,
-    ':data' => $data
-));
-$id = $mg->fetch(PDO::FETCH_LAZY);
-                ?>
+            <?php while ($col = $listData->fetch(PDO::FETCH_LAZY)) {
+                # code...
+                if($col['admin'] == $row['no_ktp']){
+                    $status = 'class="blockquote-reverse"';
+                    $user = $row['nama_depan'] . ' ' .$row['nama_belakang'];
+                }else{
+                    $status = "";
+                    $user = $col['admin'];
+                }
+            ?>
+            <blockquote <?=$status?> >
+              <p><?=$col['isi']?></p>
+              <footer><?=$user?>
+                  <br> <?=$col['create_date']?>
+              </footer>
+            </blockquote>
+
+            <?php } ?>
+
             </div>
             <div class="panel-footer">
-            <b><i><a href="?p=reply&data=<?=$id['subject']?>">Reply</a></i></b>
+            <b><i><a href="?p=reply&data=<?=$data?>">Reply</a></i></b>
             </div>
         </div>
     </div>
