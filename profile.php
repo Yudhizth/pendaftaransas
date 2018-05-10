@@ -8,10 +8,11 @@
     if(isset($_SESSION['user_session'])){
         $user_id = $_SESSION['user_session'];
     }else{
+        $user_id = '';
         echo "You have no power here, Gandalf!";
     }
 
-	echo $user_id;
+	// echo $user_id;
 
 	$stmt = $auth_user->runQuery("SELECT * FROM tb_karyawan  WHERE no_ktp=:user_id");
 	$stmt->execute(array(":user_id"=>$user_id));
